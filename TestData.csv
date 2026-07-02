@@ -1,0 +1,11 @@
+TestDataID,Name,Email,Password,ConfirmPassword,Scenario,ExpectedResult
+TD001,SuraLaxmi,sura@gmail.com,Password1234,Password1234,Valid User,201 Created - Registration Successful
+TD002,AliceSmith,alia@gmail.com,SecurePass123,SecurePass123,Valid User,201 Created - Registration Successful
+TD003,Bavya,sura@gmail.com,Password1234,Password1234,Duplicate Email,409 Conflict - Email already exists
+TD004,Cavesh,chrisgmail.com,Password1234,Password1234,Invalid Email Format,400 Bad Request
+TD005,Divya,divya@gmail.com,passwordonly,passwordonly,Weak Password (Letters Only),400 Bad Request
+TD006,Emmily,emma@gmail.com,1.23457E+11,1.23457E+11,Weak Password (Numbers Only),400 Bad Request
+TD007,José,jose@gmail.com,Password1234,Password1234,Unicode Characters,Accepted if Unicode is supported
+TD008,Sravya,  sravya@gmail.com  ,Password1234,Password1234,Leading/Trailing Spaces,Spaces are trimmed before validation
+TD009,Jahnvi@#,johnvispecial@gmail.com,Password1234,Password1234,Special Characters in Name,Validation based on application rules
+TD010,Mounika,MOUNIKA@GMAIL.COM,Password1234,Password1234,Uppercase Email,Email converted to lowercase before uniqueness check
